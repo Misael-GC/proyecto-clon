@@ -1,0 +1,190 @@
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;   /* El header debe de ocupar el 100% del tamaño de la pantalla*/
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: end;
+}
+
+header nav .nav-right-section{
+     width: 250px;
+     height: auto; /*auto significa que va a tomar el heigth de su padre en este caso header*/
+     display: flex;
+     /* list-style: none; */
+    justify-content: center;
+    align-items: center;
+    height: inherit; /*Aporte:  la height de nav no se esta definiendo, es por eso que nav toma el height de su contenido font-size definido en body.
+    Para corregirlo yo heredé el heigth de su padre header y el problema se solucionó.*/
+}
+
+nav .nav-right-section a{
+    margin-right: 1rem;  /*darle espacio a los items*/
+    color: #000;
+}
+nav .nav-right-section a:hover{ /*aporte que me gusto */
+    text-decoration: underline;
+   }
+
+nav .nav-right-section .menu-icon{
+    background-image: url("https://static.thenounproject.com/png/756729-200.png"); /*agregar una imagen, para que funcione remeber use comillas*/
+    background-repeat: no-repeat; /*esto para evitar que no se repita la imagen ya que lo hace cuando la imagen es muy little*/
+    background-position: center; /*se ajuste en el centro*/
+    background-size: contain; /*se aproxime al tamaño del contenedor */
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* -------------------------------------------main- logo------------------------------------------------------------- */
+
+main{
+   margin-top: 150px;
+   text-align: center; /*esto va a llevar al centro a todo el contenido*/
+}
+
+main .main-logo{  /* estos estilos es para darle forma al contenedor, centrarlo y acomodarlo en su espacio*/
+    width: 100%;  /*530px; */
+    margin: 0 auto; /* el 0 es en el top y el auto es hacia los lados, nos evita estar jugango con el left y right para centrarlo*/
+    margin-bottom: 35px;
+} 
+main .main-logo img{
+    height: 92px;
+    width: 272px;
+} 
+
+/* -------------------------------------------main-buscador------------------------------------------------------------- */
+
+main .main-input {
+    width: 530px; 
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-input-container {
+    width: 100%;  /*550px; */
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input{
+    width: 85%; /* 450px el % de su contenedor padre*/ 
+    height: 40px;
+    border: none;
+    outline: none; /* borde que aparece cuando le das click*/
+}
+
+main .main-input-container:hover{
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+main .main-input .search-icon {
+    background-image: url("https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_960_720.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+main .main-input .micro-icon {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+/* -------------------------------------------main-botones------------------------------------------------------------- */
+main .main-bottons{
+    width: 530px;  /*100%; */
+    margin: 0 auto; /*para que se posicione en el centro y sea flexible*/
+} 
+
+main .main-bottons div{
+    display: inline-block;
+}
+main .main-bottons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    font-size: 1.4rem;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 9px; /*separar los botones*/
+}
+
+main .main-bottons button:hover{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    color: #222;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+/*-------------------------------footer---------------------*/
+ footer{
+     width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    }
+
+    footer ul{
+        margin: 10px;
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+    }
+
+    footer .footer-left{
+        justify-content: left;
+    }
+
+    footer .footer-right{
+        justify-content: right ;
+    }
+
+    footer ul li a {
+        margin: 10px;
+        color: #5f6368;
+    }
+
+footer ul li a:hover{ /*aporte que me gusto */
+        text-decoration: underline;
+}
